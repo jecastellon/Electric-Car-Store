@@ -1,6 +1,10 @@
 body{
     margin: 0;
+    width: 100%;
     font-family: Arial, Helvetica, sans-serif;
+}
+*{
+  box-sizing: border-box;
 }
 .navbar{
     display: flex;
@@ -39,6 +43,12 @@ body{
 .menu-laptop{
     display: none;
 }
+section.mobile {
+  display: block;
+}
+section.desktop {
+  display: none;
+}
 .grid-container{
     display: grid;
     grid-template-columns: 1fr;
@@ -70,7 +80,17 @@ body{
     margin: 20px;
 }
 .paginas{
-    display: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    gap: 5px;
+    width: 100%;
+}
+.paginas a{
+    background: #f5f5f5;
+    border: solid 1px black;
+    padding: 0.5rem;
+    text-decoration: none;
 }
 .footer{
     display: flex;
@@ -109,6 +129,14 @@ body{
     .menu-mobile{
         display: none;
     }
+    section.mobile {
+        display: none;
+    }
+    section.desktop{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
     .menu-laptop{
         display: flex;
     }
@@ -143,18 +171,6 @@ body{
     .search select {
         width: 100%;
         max-width: 500px;
-    }
-    .paginas {
-        display: flex;
-        justify-content: center;
-        gap: 5px;
-        width: 100%;
-    }
-    .paginas a{
-        background: #f5f5f5;
-        border: solid 1px black;
-        padding: 0.5rem;
-        text-decoration: none;
     }
     .footer{
         font-size: small;
